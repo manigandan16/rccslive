@@ -1,9 +1,9 @@
-3name: Docker Build & Push
+name: Docker Build & Push
 
 on:
   push:
     branches:
-      - main   # runs when you push to main branch
+      - main
 
 jobs:
   build:
@@ -23,4 +23,4 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: your-dockerhub-username/your-app-name:latest
+          tags: manigandanannadurai/rccslive:latest
