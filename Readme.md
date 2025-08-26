@@ -45,7 +45,7 @@ docker push ghcr.io/manigandan16/rccslive:latest
 1. Open Portainer → Images → Pull Image
 2. Registry: `ghcr.io`
 3. Image: `manigandan16/rccslive:latest`
-4. Authentication required: ✅ (username: GitHub username, password: PAT)
+4. Authentication required: ✅ (username: GitHub username, password: PAT (Personal Access Token))
 5. Pull and deploy the container
 
 ## Troubleshooting
@@ -57,3 +57,4 @@ docker push ghcr.io/manigandan16/rccslive:latest
 ## License
 
 MIT License
+
