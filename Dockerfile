@@ -1,33 +1,18 @@
-# ---------- Stage 1: Build the React app ----------
-FROM node:18-alpine AS build
-
-# Set working directory
-WORKDIR /app
-
-# Install dependencies
+# 1. Build React client
+FROM node:18-alpine AS build-client
+WORKDIR /app/client
 COPY client/package*.json ./
-RUN npm install --legacy-peer-deps && npm rebuild esbuild
-
-# Copy project files and build
+RUN npm ci
 COPY client/ ./
-RUN npm run build
+RUN npm rebuild esbuild && npm run build
 
-
-# ---------- Stage 2: Serve with Nginx ----------
-FROM nginx:alpine
-
-# Remove default nginx static assets
-RUN rm -rf /usr/share/nginx/html/*
-
-# Copy React build files from Stage 1
-COPY --from=build /app/dist /usr/share/nginx/html
-
-# Copy custom Nginx config (optional, for React Router support)
-# Create this file if you have routes in React
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Expose port
-EXPOSE 80
-
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# 2. Setup Node server
+FROM node:18-alpine AS server
+WORKDIR /app
+COPY server/package*.json ./server/
+RUN cd server && npm ci
+COPY server ./server
+COPY --from=build-client /app/client/dist ./server/public
+WORKDIR /app/server
+EXPOSE 5000
+CMD ["npm", "start"]
