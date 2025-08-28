@@ -50,11 +50,12 @@ docker push ghcr.io/manigandan16/rccslive:latest
 
 ## Troubleshooting
 
-* **Permission Denied:** Ensure your PAT has correct scopes (`write:packages`, `repo`).
+* **Permission Denied:** Ensure your PAT (Personal Access Token) has correct scopes (`write:packages`, `repo`).
 * **Repository not found:** Make sure the repository exists on GitHub.
-* **Portainer pull errors:** Use registry authentication with username and PAT.
+* **Portainer pull errors:** Use registry authentication with username and PAT (Personal Access Token).
 
 ## License
 
 MIT License
+
 
