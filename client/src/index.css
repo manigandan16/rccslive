@@ -8,17 +8,21 @@ body {
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar {
   scrollbar-width: thin;
   background-color: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: #bdbdbd;
   border-radius: 20px;
 }
+
 ::-webkit-scrollbar-track-piece {
   border-radius: 6px;
 }
+
 ::-webkit-scrollbar-corner {
   background-color: transparent;
 }
@@ -153,107 +157,107 @@ th.relative {
   z-index: 80;
 }
 
-.pointing{
-      cursor:pointer;
-  }
+.pointing {
+  cursor: pointer;
+}
 
-  .ground {
-    font-size: 17px;
-    position: relative;
-    display: inline-block;
-    width: 6rem;
-    /* Increased width for text */
-    height: 2rem;
+.ground {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 6rem;
+  /* Increased width for text */
+  height: 2rem;
 }
 
 .ground .input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .input {
-    background-color: #009D9C;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  background-color: #009D9C;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
 .interchange {
-    width: 4.85rem;
-    height: 2.2rem;
-    position: relative;
-    border-radius: 3rem;
-    padding: 2px 10px;
-    cursor: pointer;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 4.85rem;
+  height: 2.2rem;
+  position: relative;
+  border-radius: 3rem;
+  padding: 2px 10px;
+  cursor: pointer;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .Qual,
 .Quant {
-    color: white;
+  color: white;
 }
 
 .Qual {
-    transform: translateX(-1rem);
+  transform: translateX(-1rem);
 }
 
 .interchange::before {
-    content: "";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: #012150;
-    position: absolute;
-    left: 0;
-    border-radius: 2rem;
-    transition: all 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #012150;
+  position: absolute;
+  left: 0;
+  border-radius: 2rem;
+  transition: all 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .ground input[type="checkbox"]:checked+.interchange::before {
-    transform: translateX(2.3rem);
+  transform: translateX(2.3rem);
 }
 
 .ground input[type="checkbox"]:checked+.interchange .Quant {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .ground input[type="checkbox"]:not(:checked)+.interchange {
-    background-color: #939393;
+  background-color: #939393;
 }
 
 .ground input[type="checkbox"]:not(:checked)+.interchange .Qual {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .ground input[type="checkbox"]:checked+.interchange .Qual {
-    visibility: none;
+  visibility: none;
 }
 
 .ground input[type="checkbox"]:checked+.interchange {
-    background-color: #939393;
+  background-color: #939393;
 }
 
 .ground input[type="checkbox"]:not(:checked)+.interchange .Quant {
-    visibility: none;
+  visibility: none;
 }
 
 sup {
-    font-size: 0.6em;
-    vertical-align: super;
+  font-size: 0.6em;
+  vertical-align: super;
 }
 
 .glit {
   background: rgb(1, 33, 80);
-  background: linear-gradient( 95deg, rgba(1, 33, 80, 1) 0%, rgba(10, 79, 203, 1) 41%, rgba(1, 33, 80, 1) 100% );
+  background: linear-gradient(95deg, rgba(1, 33, 80, 1) 0%, rgba(10, 79, 203, 1) 41%, rgba(1, 33, 80, 1) 100%);
 }
 
 .fwr_shadow {
@@ -262,14 +266,16 @@ sup {
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
 }
 
-audio{
+audio {
   height: 40px;
   width: 300px;
 }
 
 .react-select__control {
-  border-radius: 0.375rem; /* rounded-md */
-  border-color: #d1d5db;   /* Tailwind gray-300 */
+  border-radius: 0.375rem;
+  /* rounded-md */
+  border-color: #d1d5db;
+  /* Tailwind gray-300 */
 }
 
 .interchange10 {
@@ -310,31 +316,31 @@ audio{
   transition: all 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.ground10 input[type="checkbox"]:checked + .interchange10::before {
+.ground10 input[type="checkbox"]:checked+.interchange10::before {
   transform: translateX(0rem);
 }
 
-.ground10 input[type="checkbox"]:checked + .interchange10 .Quant {
+.ground10 input[type="checkbox"]:checked+.interchange10 .Quant {
   visibility: hidden;
 }
 
-.ground10 input[type="checkbox"]:not(:checked) + .interchange10 {
+.ground10 input[type="checkbox"]:not(:checked)+.interchange10 {
   background-color: #939393;
 }
 
-.ground10 input[type="checkbox"]:not(:checked) + .interchange10 .Qual {
+.ground10 input[type="checkbox"]:not(:checked)+.interchange10 .Qual {
   visibility: hidden;
 }
 
-.ground10 input[type="checkbox"]:checked + .interchange10 .Qual {
+.ground10 input[type="checkbox"]:checked+.interchange10 .Qual {
   visibility: none;
 }
 
-.ground10 input[type="checkbox"]:checked + .interchange10 {
+.ground10 input[type="checkbox"]:checked+.interchange10 {
   background-color: #939393;
 }
 
-.ground10 input[type="checkbox"]:not(:checked) + .interchange10 .Quant {
+.ground10 input[type="checkbox"]:not(:checked)+.interchange10 .Quant {
   visibility: none;
 }
 
@@ -343,15 +349,17 @@ audio{
 }
 
 .clrgrad {
-  background: linear-gradient( 90deg, #704c00 -65.89%, #c0860c 46.96%, #704c00 162.25% );
+  background: linear-gradient(90deg, #704c00 -65.89%, #c0860c 46.96%, #704c00 162.25%);
 }
+
 #Line .echarts-for-react {
   height: 390px !important;
 }
 
 /* Target the value container (which scrolls horizontally) */
 .react-select__value-container::-webkit-scrollbar {
-  height: 0px; /* Hide horizontal scrollbar height */
+  height: 0px;
+  /* Hide horizontal scrollbar height */
 }
 
 .react-select__value-container::-webkit-scrollbar-track {
@@ -360,4 +368,8 @@ audio{
 
 .react-select__value-container::-webkit-scrollbar-thumb {
   background: transparent;
+}
+
+.dd {
+  display: none;
 }
